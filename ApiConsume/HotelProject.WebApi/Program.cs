@@ -29,6 +29,9 @@ builder.Services.AddScoped<ISubscribeDal, EfSubscribeDal>();
 builder.Services.AddScoped<IRoomService, RoomManager>();
 builder.Services.AddScoped<IRoomDal, EfRoomDal>();
 
+builder.Services.AddAutoMapper(typeof(Program));
+
+//builder.Services.AddScoped<>
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("OtelApiCors", opts =>
