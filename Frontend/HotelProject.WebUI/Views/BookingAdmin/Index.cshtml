@@ -1,0 +1,49 @@
+﻿@model List<ResultBookingDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-body">
+            <div class="card-title">
+                <h4>Table Basic</h4>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Misafir</th>
+                            <th>Giriş Tarihi</th>
+                            <th>Çıkış Tarihi</th>
+                            <th>Durum</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var x in Model)
+                        {
+                            count++;
+                            <tr>
+                                <th>@count</th>
+                                <td>@x.Name</td>
+                                <td>@x.Checkin</td>
+                                <td>@x.CheckOut</td>
+                                <td> <span class="badge badge-primary px-2">@x.Status</span></td>
+                                <td><a class="btn btn-outline-primary">Onayla</a></td>
+                                <td><a class="btn btn-outline-danger">İptal Et</a></td>
+                                <td><a class="btn btn-outline-warning">Beklet</a></td>
+                                <td><a class="btn btn-outline-info">Güncelle</a></td>
+                                <td><a class="btn btn-outline-dark">Detaylar</a></td>
+                            </tr>
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
