@@ -10,8 +10,11 @@ using System.Threading.Tasks;
 
 namespace HotelProject.DataAccessLayer.EntityFramework
 {
-    public class EfBookingDal : GenericRepository<Booking>, IBookingDal
+    public class EfBooking2Dal : GenericRepository<Booking2>, IBooking2Dal
     {
-        public EfBookingDal(Context context) : base(context) { }
+        public EfBooking2Dal(Context context) : base(context)
+        {
+
+        }
     }
 }

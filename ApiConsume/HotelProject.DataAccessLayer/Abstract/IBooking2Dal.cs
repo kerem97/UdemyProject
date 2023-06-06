@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HotelProject.DataAccessLayer.Abstract
 {
-    public interface IBookingDal : IGenericDal<Booking>
+    public interface IBooking2Dal:IGenericDal<Booking2>
     {
     }
 }

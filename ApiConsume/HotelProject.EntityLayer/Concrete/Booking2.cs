@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace HotelProject.EntityLayer.Concrete
 {
-    public class Booking
+    public class Booking2
     {
-        public int BookingID { get; set; }
+        public int Booking2ID { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public DateTime Checkin { get; set; }
@@ -18,6 +18,6 @@ namespace HotelProject.EntityLayer.Concrete
         public string RoomCount { get; set; }
         public string SpecialRequest { get; set; }
         public string Description { get; set; }
-        public bool Status { get; set; }
+        public string Status { get; set; }
     }
 }
