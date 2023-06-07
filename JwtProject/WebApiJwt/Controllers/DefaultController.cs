@@ -10,9 +10,14 @@ namespace WebApiJwt.Controllers
     public class DefaultController : ControllerBase
     {
         [HttpGet("[action]")]
-        public IActionResult Test()
+        public IActionResult TokenOlustur()
         {
             return Ok(new CreateToken().TokenCreate());
+        }
+        [HttpGet("[action]")]
+        public IActionResult AdminTokenOlustur()
+        {
+            return Ok(new CreateToken().TokenCreateAdmin());
         }
 
 
@@ -24,7 +29,7 @@ namespace WebApiJwt.Controllers
         }
         [Authorize(Roles = "Admin,Visitor")]
         [HttpGet("[action]")]
-        public IActionResult Test3() 
+        public IActionResult Test3()
         {
             return Ok("Token başarılı bir şekilde giriş yaptı");
         }
