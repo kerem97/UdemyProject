@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<InboxContactDto>
+@{
     ViewData["Title"] = "Inbox";
     Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
 }
@@ -30,22 +31,22 @@
         </div>
     </div>
     <div class="email-list m-t-15">
-        @*  @foreach (var item in Model)
+        @foreach (var item in Model)
         {
-        <div class="message">
-        <a href="/AdminContact/MessageDetailsByInbox/@item.ContactID">
-        <div class="col-mail col-mail-1">
-        <div class="email-checkbox">
-        <input type="checkbox" id="chk2">
-        <label class="toggle" for="chk2"></label>
-        </div><span class="star-toggle ti-star"></span>
-        </div>
-        <div class="col-mail col-mail-2">
-        <div class="subject">@item.Message.Substring(0, 100)</div>
-        <div class="date">11:49 am</div>
-        </div>
-        </a>
-        </div>*@
+            <div class="message">
+                <a href="/AdminContact/MessageDetailsByInbox/@item.ContactID">
+                    <div class="col-mail col-mail-1">
+                        <div class="email-checkbox">
+                            <input type="checkbox" id="chk2">
+                            <label class="toggle" for="chk2"></label>
+                        </div><span class="star-toggle ti-star"></span>
+                    </div>
+                    <div class="col-mail col-mail-2">
+                        <div class="subject">@item.Content.Substring(0, 100)</div>
+                        <div class="date">11:49 am</div>
+                    </div>
+                </a>
+            </div>
         }
     </div>
 </div>

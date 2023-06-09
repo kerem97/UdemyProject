@@ -41,6 +41,9 @@ builder.Services.AddScoped<IGuestDal, EfGuestDal>();
 builder.Services.AddScoped<IContactService, ContactManager>();
 builder.Services.AddScoped<IContactDal, EfContactDal>();
 
+builder.Services.AddScoped<ISendMessageService, SendMessageManager>();
+builder.Services.AddScoped<ISendMessageDal, EfSendMessageDal>();
+
 
 
 builder.Services.AddAutoMapper(typeof(Program));
