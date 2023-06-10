@@ -38,8 +38,10 @@ namespace HotelProject.WebUI.Mapping
             CreateMap<CreateGuestDto, Guest>().ReverseMap();
             CreateMap<UpdateGuestDto, Guest>().ReverseMap();
             CreateMap<InboxContactDto, Contact>().ReverseMap();
-            
+
             CreateMap<CreateSendMessage, SendMessage>().ReverseMap();
+            CreateMap<ResultSendboxDto, SendMessage>().ReverseMap();
+            CreateMap<GetMessageByIDDto, Contact>().ReverseMap();
 
 
         }

@@ -22,7 +22,10 @@ namespace HotelProject.BusinessLayer.Concrete
         {
             _sendMessageDal.Delete(t);
         }
-
+        public int TGetSendMessageCount()
+        {
+            return _sendMessageDal.GetSendMessageCount();
+        }
         public SendMessage TGetByID(int id)
         {
             return _sendMessageDal.GetByID(id);
