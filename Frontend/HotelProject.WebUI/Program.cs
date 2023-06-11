@@ -35,6 +35,7 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.Cookie.HttpOnly = true;
     options.ExpireTimeSpan = TimeSpan.FromMinutes(15);
     options.LoginPath = "/Login/Index/";
+
 });
 var app = builder.Build();
 
@@ -43,6 +44,8 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
 }
+app.UseStatusCodePagesWithReExecute("/ErrorPage/Error404", "?code={0}");
+app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAuthentication();
 
