@@ -47,6 +47,8 @@ builder.Services.AddScoped<ISendMessageDal, EfSendMessageDal>();
 builder.Services.AddScoped<IMessageCategoryService, MessageCategoryManager>();
 builder.Services.AddScoped<IMessageCategoryDal, EfMessageCategoryDal>();
 
+builder.Services.AddScoped<IWorkLocationService, WorkLocationManager>();
+builder.Services.AddScoped<IWorkLocationDal, EfWorkLocationDal>();
 
 
 

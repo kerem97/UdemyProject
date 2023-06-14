@@ -25,7 +25,8 @@ namespace HotelProject.WebUI.Dtos.AppUser
         [System.ComponentModel.DataAnnotations.Required(ErrorMessage = "Bu Alan Boş Geçilemez")]
         [Compare("Password", ErrorMessage = "Şifreler Uyuşmuyor")]
         public string ConfirmPassword { get; set; }
-
+       
         public string City { get; set; }
+      
     }
 }

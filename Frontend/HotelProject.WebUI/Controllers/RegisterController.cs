@@ -35,7 +35,10 @@ namespace HotelProject.WebUI.Controllers
                 Surname = createNewUserDto.Surname,
                 Email = createNewUserDto.Mail,
                 UserName = createNewUserDto.UserName,
-                City= createNewUserDto.City,
+                City = createNewUserDto.City,
+                ImageUrl = "deneme",
+                WorkLocationID = 1,
+                WorkDepartment="asd"
 
             };
 
