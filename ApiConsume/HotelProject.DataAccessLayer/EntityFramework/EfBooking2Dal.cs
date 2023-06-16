@@ -16,5 +16,12 @@ namespace HotelProject.DataAccessLayer.EntityFramework
         {
 
         }
+
+        public int GetBookingCount()
+        {
+            var context = new Context();
+            var value = context.Bookings2.Count();
+            return value;
+        }
     }
 }

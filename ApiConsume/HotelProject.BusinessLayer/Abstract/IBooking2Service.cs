@@ -9,5 +9,6 @@ namespace HotelProject.BusinessLayer.Abstract
 {
     public interface IBooking2Service : IGenericService<Booking2>
     {
+        int TGetBookingCount();
     }
 }
