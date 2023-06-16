@@ -12,6 +12,12 @@ namespace HotelProject.BusinessLayer.Concrete
     public class WorkLocationManager : IWorkLocationService
     {
         private readonly IWorkLocationDal _workLocationDal;
+
+        public WorkLocationManager(IWorkLocationDal workLocationDal)
+        {
+            _workLocationDal = workLocationDal;
+        }
+
         public void TDelete(WorkLocation t)
         {
             _workLocationDal.Delete(t);

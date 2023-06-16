@@ -23,5 +23,12 @@ namespace HotelProject.DataAccessLayer.EntityFramework
             var value = context.Bookings2.Count();
             return value;
         }
+
+        public List<Booking2> Last6Bookings()
+        {
+            var context = new Context();
+            var values = context.Bookings2.OrderByDescending(x => x.Booking2ID).Take(6).ToList();
+            return values;
+        }
     }
 }
